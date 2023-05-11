@@ -1,0 +1,53 @@
+﻿@page "/Exemple/Formatare"
+
+@using WebDesignRazor;
+
+@{
+    ViewBag.Title = "Exemple de formatare a textului";
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+<h3>Stiluri fizice:</h3>
+
+<pre>
+    Text simplu
+    <b>Text îngroșat</b>
+    <i>Text înclinat</i>
+    <b><i>Text cu caractere îngroșate și înclinate</i></b>
+    <u>Text subliniat</u>
+    <big>Text mărit</big>
+    <small>Text micșorat</small>
+    <strike>Text tăiat</strike>
+    2<sup>4x+3</sup> = 16<sup>-7x + 10</sup>
+    C<sub>6</sub>H<sub>6</sub> + Cl<sub>2</sub> = C<sub>6</sub>H<sub>5</sub>Cl + HCl
+</pre>
+
+<h3>Stiluri logice:</h3>
+
+<pre>
+    Text simplu
+    <em>Text evidențiat</em>
+    <strong>Text important</strong>
+    <kbd>Text cules de la tastatură</kbd>
+    <dfn>franglais</dfn> - masc. neologisme ale limbii franceze care provin din limba engleză
+    var <var>x</var>: string = 3;
+    <cite>How about Minsk? - Worf, naming things.</cite>
+</pre>
+
+Adresa: <address>str. Pușkin, 42, Chișinău, R. Moldova</address>
+
+<br />
+
+<section>
+    <h2>Fragmentele de cod HTML pentru această pagină:</h2>
+
+    <h5>Stiluri fizice</h5>
+    <code>
+        <pre>@HtmlCodeHelper.ReadHtml("./Pages/Exemple/Formatare.cshtml", 11, 24)</pre>
+    </code>
+
+    <h5>Stiluri logice</h5>
+    <code>
+        <pre>@HtmlCodeHelper.ReadHtml("./Pages/Exemple/Formatare.cshtml", 26, 38)</pre>
+    </code>
+</section>
