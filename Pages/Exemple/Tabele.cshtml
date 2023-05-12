@@ -1,0 +1,84 @@
+﻿@page "/Exemple/Tabele"
+
+@using WebDesignRazor;
+
+@{
+    ViewBag.Title = "Exemplu cu tabele";
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+<h3>Tabel cu notele semestriale</h3>
+<table class="table"> <!-- Tabelul în cauză este redat de Bootstrap, utilizat de site-ul web -->
+    <thead>
+        <tr>
+            <td>Nr. d/o</td>
+            <td>Disciplina de învățământ</td>
+            <td>Nota medie pe semestrul I</td>
+            <td>Nota medie pe semestrul II</td>
+            <td>Nota medie anuală</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Limba și literatura română</td>
+            <td>8.37</td>
+            <td>7.20</td>
+            <td>7.78</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Istoria românilor și universală</td>
+            <td>9.25</td>
+            <td>9.34</td>
+            <td>9.29</td>
+        </tr>
+    </tbody>
+</table>
+
+<br />
+
+<h2>Orarul lecțiilor</h2>
+<table border="1"> <!-- Acest tabel nu este redat de Bootstrap, deci este unul simplu -->
+    <thead>
+        <tr>
+            <td>Luni</td>
+            <td>Marți</td>
+            <td>Miercuri</td>
+            <td>Joi</td>
+            <td>Vineri</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Geografia</td>
+            <td>Fizica</td>
+            <td>Educația economică</td>
+            <td>Istoria</td>
+            <td>Chimia</td>
+        </tr>
+        <tr>
+            <td>Limba română</td>
+            <td>Istoria</td>
+            <td>Educația fizică</td>
+            <td>Limba franceză</td>
+            <td>Limba română</td>
+        </tr>
+    </tbody>
+</table>
+
+<br />
+
+<section>
+    <h2>Fragmentul de cod HTML pentru această pagină:</h2>
+
+    <h5>Notele semestriale</h5>
+    <code>
+        <pre>@HtmlCodeHelper.ReadHtml("./Pages/Exemple/Tabele.cshtml", 10, 39)</pre>
+    </code>
+
+    <h5>Orarul lecțiilor</h5>
+    <code>
+        <pre>@HtmlCodeHelper.ReadHtml("./Pages/Exemple/Tabele.cshtml", 41, 70)</pre>
+    </code>
+</section>
