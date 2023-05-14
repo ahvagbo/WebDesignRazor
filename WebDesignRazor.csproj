@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Pages\Bacalaureat\Sesiunea2020\" />
     <Folder Include="Pages\Exemple\" />
     <Folder Include="wwwroot\img\" />
   </ItemGroup>
